@@ -1,6 +1,6 @@
 # cloud-deployment-lab
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+A barebones Node.js app using [Express 4](http://expressjs.com/). Availible routes are `/`, `/greeting`, and `/todo`.
 
 ## Running Locally
 
