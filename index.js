@@ -18,9 +18,9 @@ app.use(logger('dev'));
 
   For example, we could start the app on port 6000 by running `PORT=6000 npm start`
 */
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 5000));
 
-app.get('/', function(request, response) {
+app.get('/', (request, response) => {
   response.send('Hello World!')
 });
 
@@ -28,7 +28,7 @@ app.get('/greeting', (request, response) => {
   // FIXME: If a name is not given, the app says 'Hello undefined'
   const message = `Hello ${request.query.name}`;
   response.status(200).send(message);
-})
+});
 
 app.get('/todo', async (request, response) => {
   try {
@@ -41,5 +41,5 @@ app.get('/todo', async (request, response) => {
 });
 
 app.listen(app.get('port'), () => {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+  console.log("Node app is running at localhost:" + app.get('port'));
+});
