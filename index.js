@@ -24,6 +24,12 @@ app.get('/', function(request, response) {
   response.send('Hello World!')
 });
 
+app.get('/greeting', (request, response) => {
+  // FIXME: If a name is not given, the app says 'Hello undefined'
+  const message = `Hello ${request.query.name}`;
+  response.status(200).send(message);
+})
+
 app.get('/todo', async (request, response) => {
   try {
     const todo = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
